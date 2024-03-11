@@ -1,27 +1,23 @@
-# TÍTULO DO PROJETO
+# GAME OF TI
 
-`CURSO`
+`Tecnologia em Análise e Desenv. de Sistemas`
 
-`DISCIPLINA`
+`Projeto: Desenvolvimento de uma Aplicação Móvel em um Ambiente de Negócio`
 
-`SEMESTRE`
+`Eixo 3 - 2024/1`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+O projeto é voltado para a construção de uma aplicação móvel para ajudar no entendimento das áreas que envolvem a carreira do profissional de TI (tecnologia da informação), aplicando a teoria de gamificação (ou gamification, em inglês).
 
 ## Integrantes
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
+* Luna Alcântara Reis Silva
+* Felipe Massahiro Taguchi Coelho
+* Marlon Sttefane Guimaraes Silva
+* Tuerê Pinto
 
 ## Orientador
 
-* Nome completo do professor 1
-
-## Instruções de utilização
-
-Assim que a primeira versão do sistema estiver disponível, deverá complementar com as instruções de utilização. Descreva como instalar eventuais dependências e como executar a aplicação.
+* Diego Roberto Gonçalves de Pontes
 
 # Documentação
 
@@ -41,9 +37,9 @@ Assim que a primeira versão do sistema estiver disponível, deverá complementa
 <li><a href="docs/13-Referências.md"> Referências</a></li>
 </ol>
 
-# Código
+# Contribuição, licença de uso e código fonte
 
-<li><a href="src/README.md"> Código Fonte</a></li>
+<li><a href="src/README.md">Documentação em Pt-Br</a></li>
 
 # Apresentação
 
