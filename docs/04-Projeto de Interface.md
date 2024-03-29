@@ -13,7 +13,7 @@ O diagrama apresenta o estudo do fluxo de interação do usuário com o sistema 
 
 ## Wireframes
 ### Segue o link para o Wireframe interativo: 
-https://marvelapp.com/prototype/c6b9a87/screen/94256144
+(https://marvelapp.com/prototype/c6b9a87/screen/94255576)
 
 ![Exemplo de Wireframe](img/wireframe1.jpg)
 ![Exemplo de Wireframe](img/wireframe2.jpg)
