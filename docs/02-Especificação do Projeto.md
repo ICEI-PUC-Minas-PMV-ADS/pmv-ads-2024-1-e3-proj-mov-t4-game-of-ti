@@ -1,6 +1,6 @@
 # Especificações do Projeto
 
-<span style="color:red">Pré-requisitos: <a href="1-Documentação de Contexto.md"> Documentação de Contexto</a></span>
+<span style="color:red">Pré-requisitos: <a href="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e3-proj-mov-t4-game-of-ti/blob/main/docs/01-Documentação%20de%20Contexto.md"> Documentação de Contexto</a></span>
 
 Dado problema das personas têm dificuldade de compreensão da área de TI (tecnologia da informação) a ideia é buscar a solução a partir da perspectiva das personas entrevistadas.
 
