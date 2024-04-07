@@ -1,6 +1,6 @@
 # Especificações do Projeto
 
-<span style="color:red">Pré-requisitos: <a href="1-Documentação de Contexto.md"> Documentação de Contexto</a></span>
+<span style="color:red">Pré-requisitos: <a href="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e3-proj-mov-t4-game-of-ti/blob/main/docs/01-Documentação%20de%20Contexto.md"> Documentação de Contexto</a></span>
 
 Dado problema das personas têm dificuldade de compreensão da área de TI (tecnologia da informação) a ideia é buscar a solução a partir da perspectiva das personas entrevistadas.
 
@@ -64,7 +64,13 @@ Conforme as Histórias de Usuário, sendo admistrador ou não, consistem em uma 
 
 ### Análise da Situação Atual
 
-Apresente aqui os problemas existentes que viabilizam sua proposta. Apresente o modelo do sistema como ele funciona hoje. Caso sua proposta seja inovadora e não existam processos claramente definidos, apresente como as tarefas que o seu sistema pretende implementar são executadas atualmente, mesmo que não se utilize tecnologia computacional. 
+Dado o crescimento tecnológico as empresas buscam cada vez mais profissionais formados e qualificados para atuar nas área de TI(Tecnologia da informação), como postando no site Olhar Digital[^1], o Brasil em 2024 deve superar o EUA no crescimento e na busca.
+
+Visando o cenário descrito acima, a proposta trás como forma inovadora o aprendizado sobre quais são as oportunidades existentes no mercado de TI (Tecnologia da informação), explorando conceitos e simplificando de forma que as persona possam usufruir de forma a se capacitarem em níveis básico sobre o tema.
+
+Através de um aplicativo mobile as persona acessam uma plataforma com temas de jornadas que exploram os conceitos TI (Tecnologia da informação), DEVOPS, Programação, Tester, Gestão e etc.
+
+Conforme a persona vai interagindo com a aplicação ele vai concluindo temas, subindo de nível e ganhando uma pontuação de dará acesso aos outros conteúdos disponíveis.
 
 ### Descrição Geral da Proposta
 
@@ -216,3 +222,7 @@ O gerenciamento adequado de tarefas contribuirá para que o projeto alcance alto
 O processo de determinar o orçamento do projeto é uma tarefa que depende, além dos produtos (saídas) dos processos anteriores do gerenciamento de custos, também de produtos oferecidos por outros processos de gerenciamento, como o escopo e o tempo.
 
 ![Orçamento](img/02-orcamento.png)
+
+## Referências
+
+[^1]: Olhar Digital - Brasil deve superar EUA e liderar crescimento de TI nas Américas em 2024, diz relatório. Publicado em 02 Janeiro. 2024. Disponível em: https://olhardigital.com.br/2023/12/08/pro/brasil-deve-superar-eua-e-liderar-crescimento-de-ti-nas-americas-em-2024-diz-relatorio/.
