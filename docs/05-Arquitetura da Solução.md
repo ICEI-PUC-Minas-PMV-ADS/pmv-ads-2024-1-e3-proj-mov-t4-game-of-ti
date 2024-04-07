@@ -17,7 +17,7 @@ As referências abaixo irão auxiliá-lo na geração do artefato “Diagrama de
 
 ## Modelo ER
 
-![Modelo ER](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e3-proj-mov-t4-game-of-ti/assets/102487978/ece5d09d-1c83-4144-91f5-150c9f14a4ac)
+![Modelo ER (1)](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e3-proj-mov-t4-game-of-ti/assets/102487978/a4d7fa64-0c73-40de-9b44-b7875425c4e6)
 
 
 ## Esquema Relacional
