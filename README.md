@@ -12,6 +12,7 @@ O projeto é voltado para a construção de uma aplicação móvel para ajudar n
 
 * Luna Alcântara Reis Silva
 * Felipe Massahiro Taguchi Coelho
+* Hebert Eustaquio De Almeida Sandinha
 * Marlon Sttefane Guimaraes Silva
 * Tuerê Pinto
 

@@ -1,6 +1,6 @@
 # Especificações do Projeto
 
-<span style="color:red">Pré-requisitos: <a href="1-Documentação de Contexto.md"> Documentação de Contexto</a></span>
+<span style="color:red">Pré-requisitos: <a href="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e3-proj-mov-t4-game-of-ti/blob/main/docs/01-Documentação%20de%20Contexto.md"> Documentação de Contexto</a></span>
 
 Dado problema das personas têm dificuldade de compreensão da área de TI (tecnologia da informação) a ideia é buscar a solução a partir da perspectiva das personas entrevistadas.
 
@@ -55,7 +55,6 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 | Administrador | Cadastrar conteúdo | Permitir que possam administrar o sistema |
 | Administrador | Editar conteúdo | Permitir que possam administrar o sistema |
 
-
 As histórias de usuário listadas acima, são relevantes para o projeto de sua solução. 
 
 Conforme as Histórias de Usuário, sendo admistrador ou não, consistem em uma ferramenta poderosa para a compreensão e elicitação dos requisitos funcionais e não funcionais da sua aplicação listados abaixo neste documento.
@@ -64,33 +63,43 @@ Conforme as Histórias de Usuário, sendo admistrador ou não, consistem em uma 
 
 ### Análise da Situação Atual
 
-Apresente aqui os problemas existentes que viabilizam sua proposta. Apresente o modelo do sistema como ele funciona hoje. Caso sua proposta seja inovadora e não existam processos claramente definidos, apresente como as tarefas que o seu sistema pretende implementar são executadas atualmente, mesmo que não se utilize tecnologia computacional. 
+Dado o crescimento tecnológico as empresas buscam cada vez mais profissionais formados e qualificados para atuar nas área de TI(Tecnologia da informação), como postando no site Olhar Digital[^1], o Brasil em 2024 deve superar o EUA no crescimento e na busca.
+
+Visando o cenário descrito acima, a proposta trás como forma inovadora o aprendizado sobre quais são as oportunidades existentes no mercado de TI (Tecnologia da informação), explorando conceitos e simplificando de forma que as persona possam usufruir de forma a se capacitarem em níveis básico sobre o tema.
 
 ### Descrição Geral da Proposta
 
-Apresente aqui uma descrição da sua proposta abordando seus limites e suas ligações com as estratégias e objetivos do negócio. Apresente aqui as oportunidades de melhorias.
+Através de um aplicativo mobile as persona acessam uma plataforma com temas de jornadas que exploram os conceitos TI (Tecnologia da informação), DEVOPS, Programação, Tester, Gestão e etc.
 
+Conforme a persona vai interagindo com a aplicação ele vai concluindo temas, subindo de nível e ganhando uma pontuação de dará acesso aos outros conteúdos disponíveis.
 
-### Processo 1 – NOME DO PROCESSO
+### Processo 1 – PROCESSO ESCOLHA DO TEMA DE ESTUDOS
 
-Apresente aqui o nome e as oportunidades de melhorias para o processo 1. Em seguida, apresente o modelo do processo 1, descrito no padrão BPMN. 
+Oportunidades de melhorias para o processo 1. 
 
-![Processo 1](img/02-bpmn-proc1.png)
+A cada conclusão do tema inicial a persona poderá iniciar um novo tema.
 
-### Processo 2 – NOME DO PROCESSO
+![Processo 1](img/diagrama_flow_negocio.png)
 
-Apresente aqui o nome e as oportunidades de melhorias para o processo 2. Em seguida, apresente o modelo do processo 2, descrito no padrão BPMN.
+### Processo 2 – PROCESSO NIVEIS DO TEMA DE ESTUDOS
 
-![Processo 2](img/02-bpmn-proc2.png)
+Oportunidades de melhorias para o processo 2. 
+
+A cada conclusão do tema inicial a persona poderá iniciar em um novo nível de aprofundamento de estudos.
+
+![Processo 2](img/diagrama_flow_negocio_nivel.png)
 
 ## Indicadores de Desempenho
 
 Apresente aqui os principais indicadores de desempenho e algumas metas para o processo. Atenção: as informações necessárias para gerar os indicadores devem estar contempladas no diagrama de classe. Colocar no mínimo 5 indicadores. 
 
-Usar o seguinte modelo: 
-
-![Indicadores de Desempenho](img/02-indic-desemp.png)
-Obs.: todas as informações para gerar os indicadores devem estar no diagrama de classe a ser apresentado a posteriori. 
+| Indicador | Objetivo | Descrição | Cálculo | Fonte dados | Perspectiva |  
+|--|--|--|--|--|--|
+| Percentual de erros | Metrificar a quatidade de erros reportados | A cada tentantiva de acesso ao sistema ou conteúdo contabilizar |  1*1 | Tabela de log de erros | Melhoria de funcionalidades |
+| Aderencia de conteúdo | Metrificar a qualidade do conteúdo | Através de feedback das persona metrificar em % a qualidade do conteúdo | *100 | Tabela de log avaliação do tema | Melhoria de conteúdo |
+| Conclusão do tema | Metrificar a quantidade de conclusão |  Metrificar em % a quantidade de conteúdo concluído pelas persona | *100 | Tabela de log avaliação do tema | Melhoria de conteúdo |
+| Persona ativa | Metrificar a quantidade de persona ativas |  Metrificar em % a quantidade de persona ativas | *100 | Tabela de log avaliação do tema | Melhoria de conteúdo |
+| Quantidade de download | Metrificar a quantidade de download | Metrificar em % a qualidade de downloads | *100 | Tabela de log avaliação da aplicação | Melhoria da aplicação |
 
 ## Requisitos
 
@@ -149,16 +158,7 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 ## Diagrama de Casos de Uso
 
-O diagrama de casos de uso é o próximo passo após a elicitação de requisitos, que utiliza um modelo gráfico e uma tabela com as descrições sucintas dos casos de uso e dos atores. Ele contempla a fronteira do sistema e o detalhamento dos requisitos funcionais com a indicação dos atores, casos de uso e seus relacionamentos. 
-
-As referências abaixo irão auxiliá-lo na geração do artefato “Diagrama de Casos de Uso”.
-
-> **Links Úteis**:
-> - [Criando Casos de Uso](https://www.ibm.com/docs/pt-br/elm/6.0?topic=requirements-creating-use-cases)
-> - [Como Criar Diagrama de Caso de Uso: Tutorial Passo a Passo](https://gitmind.com/pt/fazer-diagrama-de-caso-uso.html/)
-> - [Lucidchart](https://www.lucidchart.com/)
-> - [Astah](https://astah.net/)
-> - [Diagrams](https://app.diagrams.net/)
+![Caso de uso](img/diagrama_caso_uso.png)
 
 # Matriz de Rastreabilidade
 
@@ -193,26 +193,40 @@ Dados os requisitos funcionais e não funcionas a matriz de rastreabilidade ser�
 
 # Gerenciamento de Projeto
 
-De acordo com o PMBoK v6 as dez áreas que constituem os pilares para gerenciar projetos, e que caracterizam a multidisciplinaridade envolvida, são: Integração, Escopo, Cronograma (Tempo), Custos, Qualidade, Recursos, Comunicações, Riscos, Aquisições, Partes Interessadas. Para desenvolver projetos um profissional deve se preocupar em gerenciar todas essas dez áreas. Elas se complementam e se relacionam, de tal forma que não se deve apenas examinar uma área de forma estanque. É preciso considerar, por exemplo, que as áreas de Escopo, Cronograma e Custos estão muito relacionadas. Assim, se eu amplio o escopo de um projeto eu posso afetar seu cronograma e seus custos.
+Essa solução se baseia nos conceitos do PMBoK v6, que constituem os pilares para gerenciar projetos, e que caracterizam a multidisciplinaridade envolvida, são: Integração, Escopo, Cronograma (Tempo), Custos, Qualidade, Recursos, Comunicações, Riscos, Aquisições, Partes Interessadas. 
 
 ## Gerenciamento de Tempo
 
-Com diagramas bem organizados que permitem gerenciar o tempo nos projetos, o gerente de projetos agenda e coordena tarefas dentro de um projeto para estimar o tempo necessário de conclusão.
+O diagramas abaixo é a visão organizada do gerenciamento do tempo de entrega, o gerente de projetos agenda e coordena tarefas dentro de um projeto para estimar o tempo necessário de conclusão conforme os requisitos funcionais e não funcionais. 
 
-![Diagrama de rede simplificado notação francesa (método francês)](img/02-diagrama-rede-simplificado.png)
+![Diagrama de rede simplificado notação francesa (método francês)](img/diagrama_pmbok.png)
 
 O gráfico de Gantt ou diagrama de Gantt também é uma ferramenta visual utilizada para controlar e gerenciar o cronograma de atividades de um projeto. Com ele, é possível listar tudo que precisa ser feito para colocar o projeto em prática, dividir em atividades e estimar o tempo necessário para executá-las.
 
-![Gráfico de Gantt](img/02-grafico-gantt.png)
+| Nome da Tarefa | Duração | Início | Término | Predecessores | Fevereiro | Março | Abril | Maio | Junho | Julho |
+|--|--|--|--|--|--|--|--|--|--|--|
+| RF-001 | 2 semanas | ETAPA 3 | ETAPA 5 | | ||-|-|-|-|
+| RF-002 | 2 semanas | ETAPA 3 | ETAPA 5 | | ||-|-|-|-|
+| RF-004 | 2 semanas | ETAPA 3 | ETAPA 5 | | ||-|-|-|-|
+| RF-005 | 2 semanas | ETAPA 3 | ETAPA 5 | | ||-|-|-|-|
+| RF-006 | 2 semanas | ETAPA 3 | ETAPA 5 | | ||-|-|-|-|
+| RF-007 | 2 semanas | ETAPA 3 | ETAPA 5 | | ||-|-|-|-|
+| RF-008 | 2 semanas | ETAPA 3 | ETAPA 5 | | ||-|-|-|-|
+| RF-009 | 2 semanas | ETAPA 3 | ETAPA 5 | | ||-|-|-|-|
+| RF-010 | 2 semanas | ETAPA 3 | ETAPA 5 | | ||-|-|-|-|
+| RF-011 | 2 semanas | ETAPA 3 | ETAPA 5 | | ||-|-|-|-|
+| RF-012 | 2 semanas | ETAPA 3 | ETAPA 5 | | ||-|-|-|-|
+| RF-013 | 2 semanas | ETAPA 3 | ETAPA 5 | | ||-|-|-|-|
+| RF-014 | 2 semanas | ETAPA 3 | ETAPA 5 | | ||-|-|-|-|
 
 ## Gerenciamento de Equipe
 
-O gerenciamento adequado de tarefas contribuirá para que o projeto alcance altos níveis de produtividade. Por isso, é fundamental que ocorra a gestão de tarefas e de pessoas, de modo que os times envolvidos no projeto possam ser facilmente gerenciados. 
-
-![Simple Project Timeline](img/02-project-timeline.png)
+O gerenciamento das tarefas é feita conforme o board SCRUM [clique aqui.](https://github.com/orgs/ICEI-PUC-Minas-PMV-ADS/projects/858/views/2) para que o projeto alcance altos níveis de produtividade. 
 
 ## Gestão de Orçamento
 
-O processo de determinar o orçamento do projeto é uma tarefa que depende, além dos produtos (saídas) dos processos anteriores do gerenciamento de custos, também de produtos oferecidos por outros processos de gerenciamento, como o escopo e o tempo.
+O orçamento do projeto é de $100.00 teto limite. Recurso esse destinado ao MVP de solução.
 
-![Orçamento](img/02-orcamento.png)
+## Referências
+
+[^1]: Olhar Digital - Brasil deve superar EUA e liderar crescimento de TI nas Américas em 2024, diz relatório. Publicado em 02 Janeiro. 2024. Disponível em: https://olhardigital.com.br/2023/12/08/pro/brasil-deve-superar-eua-e-liderar-crescimento-de-ti-nas-americas-em-2024-diz-relatorio/.
