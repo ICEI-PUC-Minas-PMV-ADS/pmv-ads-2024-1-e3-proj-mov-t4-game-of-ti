@@ -2,9 +2,9 @@
 
 <span style="color:red">Pré-requisitos: <a href="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e3-proj-mov-t4-game-of-ti/blob/main/docs/03-Metodologia.md"> Projeto de Interface</a></span>
 
-Definição de como o software é estruturado em termos dos componentes que fazem parte da solução e do ambiente de hospedagem da aplicação.
+O software é estruturado em React nativo no mobile, tendo integração com os componentes de SQLite e DATA ANALYTICS CLOUD que fazem parte da solução e do ambiente de hospedagem da aplicação no device das persona.
 
-![Arquitetura da Solução](img/02-mob-arch.png)
+![Arquitetura da Solução](img/diagrama_arch.png)
 
 ## Diagrama de Classes
 
@@ -46,7 +46,6 @@ Perfil do Usuário:
 Notificações e Atualizações:
    - O aplicativo enviará notificações push para informar os usuários sobre novos cursos disponíveis, atualizações de progresso, lembretes de prazos e outras informações importantes relacionadas ao aprendizado.
 
-
 ## Tecnologias Utilizadas
 
 Plataforma Móvel:
@@ -73,17 +72,9 @@ Testes e Qualidade de Código:
    - Serão implementados testes para garantir a estabilidade e qualidade do código, incluindo testes unitários e de interface do usuário.
    - Serão seguidas práticas de desenvolvimento ágil para permitir entregas incrementais e iterativas do aplicativo, possibilitando ajustes conforme necessário durante o desenvolvimento.
 
-
 ## Hospedagem
 
-Explique como a hospedagem e o lançamento da plataforma foi feita.
-
-> **Links Úteis**:
->
-> - [Website com GitHub Pages](https://pages.github.com/)
-> - [Programação colaborativa com Repl.it](https://repl.it/)
-> - [Getting Started with Heroku](https://devcenter.heroku.com/start)
-> - [Publicando Seu Site No Heroku](http://pythonclub.com.br/publicando-seu-hello-world-no-heroku.html)
+A hospedagem e o lançamento da plataforma é feita nativa através de componestes disponibilizados pela fornecedora do sistema Android (Google).
 
 ## Qualidade de Software
 
