@@ -26,13 +26,53 @@ O esquema relacional abaixo ilustra graficamente como será a estrutura do softw
 
 ## Modelo Físico
 
-Entregar um arquivo banco.sql contendo os scripts de criação das tabelas do banco de dados. Este arquivo deverá ser incluído dentro da pasta src\bd.
+O modelo físico do aplicativo móvel será estruturado em torno de várias telas e componentes interativos para proporcionar uma experiência de usuário intuitiva e eficiente. Abaixo está uma descrição das principais telas e funcionalidades do aplicativo:
+
+Tela de Boas-Vindas:
+   - Ao abrir o aplicativo pela primeira vez, os usuários serão recebidos com uma tela de boas-vindas. Esta tela fornecerá uma breve introdução ao propósito do aplicativo e incentivará os usuários a fazer login ou criar uma conta.
+
+Autenticação de Usuário:
+   - O aplicativo permitirá que os usuários façam login utilizando suas credenciais existentes ou se cadastrem para criar uma nova conta. Serão fornecidas opções de autenticação, como login com e-mail, login com redes sociais (por exemplo, Google, Facebook) ou autenticação biométrica (impressão digital, reconhecimento facial).
+
+Dashboard Principal:
+   - Após o login bem-sucedido, os usuários serão direcionados para o dashboard principal. Esta tela apresentará uma visão geral das principais funcionalidades do aplicativo, como acesso rápido a cursos, trilhas de aprendizado, estatísticas de progresso e recomendações personalizadas com base nos interesses do usuário.
+
+Explorar Cursos e Trilhas de Aprendizado:
+   - Os usuários poderão explorar uma variedade de cursos e trilhas de aprendizado disponíveis no aplicativo. Será possível visualizar detalhes sobre cada curso, incluindo descrição, instrutor, classificação e conteúdo do curso. Além disso, os usuários poderão se inscrever em cursos individuais ou seguir trilhas de aprendizado recomendadas para alcançar objetivos específicos de carreira.
+
+Perfil do Usuário:
+   - Os usuários terão acesso ao seu perfil pessoal, onde poderão visualizar seu progresso, conquistas, certificações obtidas e configurações da conta. Eles também poderão editar suas preferências de aprendizado, interesses e níveis de habilidade para receber recomendações mais relevantes.
+
+Notificações e Atualizações:
+   - O aplicativo enviará notificações push para informar os usuários sobre novos cursos disponíveis, atualizações de progresso, lembretes de prazos e outras informações importantes relacionadas ao aprendizado.
+
 
 ## Tecnologias Utilizadas
 
-Descreva aqui qual(is) tecnologias você vai usar para resolver o seu problema, ou seja, implementar a sua solução. Liste todas as tecnologias envolvidas, linguagens a serem utilizadas, serviços web, frameworks, bibliotecas, IDEs de desenvolvimento, e ferramentas.
+Plataforma Móvel:
+   - O sistema será desenvolvido como um aplicativo móvel para Android, utilizando frameworks ou multiplataforma como React para garantir a compatibilidade e acessibilidade em diferentes dispositivos móveis.
 
-Apresente também uma figura explicando como as tecnologias estão relacionadas ou como uma interação do usuário com o sistema vai ser conduzida, por onde ela passa até retornar uma resposta ao usuário.
+Backend:
+   - Se necessário, um backend simples poderá ser desenvolvido para suportar funcionalidades específicas do aplicativo, como autenticação de usuários, armazenamento de dados e processamento de lógica de negócios.
+    
+Frontend:
+   - A interface do usuário será desenvolvida  para a plataforma Android utilizando um framework multiplataforma como React  para maximizar a eficiência e a consistência do design.
+     - Serão seguidas as diretrizes de design específicas de cada plataforma para garantir uma experiência de usuário nativa e intuitiva.
+
+Segurança:
+   - Serão implementadas práticas de segurança para proteger os dados do usuário e garantir a integridade e confidencialidade das informações, utilizando recursos oferecidos pela plataforma móvel, como:
+     - Armazenamento seguro de dados localmente no dispositivo utilizando APIs criptografadas.
+     - Utilização de protocolos seguros de comunicação, como HTTPS, para proteger a transferência de dados entre o aplicativo e o servidor (se aplicável).
+
+Integrações:
+   - O aplicativo poderá integrar-se com serviços externos relevantes para fornecer funcionalidades adicionais e enriquecer a experiência do usuário, como:
+     - Integrações com APIs de redes sociais para autenticação de usuários e compartilhamento de conteúdo.
+     - Integrações com serviços de geolocalização para fornecer recursos baseados na localização do usuário, se aplicável.
+
+Testes e Qualidade de Código:
+   - Serão implementados testes para garantir a estabilidade e qualidade do código, incluindo testes unitários e de interface do usuário.
+   - Serão seguidas práticas de desenvolvimento ágil para permitir entregas incrementais e iterativas do aplicativo, possibilitando ajustes conforme necessário durante o desenvolvimento.
+
 
 ## Hospedagem
 
