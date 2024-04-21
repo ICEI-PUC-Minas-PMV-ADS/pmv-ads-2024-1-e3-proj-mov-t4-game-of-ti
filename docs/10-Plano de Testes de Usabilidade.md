@@ -54,20 +54,8 @@ Os usuários devem fornecer feedback sobre a usabilidade do software após os te
 | Orientação 	| Estando logado na aplicação: <br> - Localizar e clicar em algum conteúdo desejado <br> |
 | Critério de Êxito | - Facilidade ao navegar pela aplicação e acessar os conteúdos. |
 |  	|  	|
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ Obs: A tradução do navegador nesta página pode distrocer algumas palavras.
+ 
 -----------------------------------------------------------------
 O teste de usabilidade permite avaliar a qualidade da interface com o usuário da aplicação interativa. O Plano de Testes de Software é gerado a partir da especificação do sistema e consiste em casos de testes que deverão ser executados quando a implementação estiver parcial ou totalmente pronta.
 
