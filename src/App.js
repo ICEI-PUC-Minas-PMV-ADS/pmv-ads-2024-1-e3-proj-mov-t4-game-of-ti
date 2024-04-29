@@ -1,6 +1,5 @@
-import React, { useState } from "react";
-import { StyleSheet, Alert } from "react-native";
-import { PaperProvider, Button, Text } from "react-native-paper";
+import React from "react";
+import { PaperProvider } from "react-native-paper";
 
 import Layout from "./pages/layout";
 
