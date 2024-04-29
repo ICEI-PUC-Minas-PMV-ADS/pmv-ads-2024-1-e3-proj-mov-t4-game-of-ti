@@ -1,19 +1,25 @@
 # Plano de Testes de Software
 
-<span style="color:red">Pré-requisitos: <a href="2-Especificação do Projeto.md"> Especificação do Projeto</a></span>, <a href="3-Projeto de Interface.md"> Projeto de Interface</a>
+### Obs: Para acessa a documentação do Registro de Testes de Software [clique aqui.](./09-Registro%20de%20Testes%20de%20Software.md)
+---
 
-Apresente os cenários de testes utilizados na realização dos testes da sua aplicação. Escolha cenários de testes que demonstrem os requisitos sendo satisfeitos.
+Cenários de testes utilizados na realização dos testes da sua aplicação.
 
-Enumere quais cenários de testes foram selecionados para teste. Neste tópico o grupo deve detalhar quais funcionalidades avaliadas, o grupo de usuários que foi escolhido para participar do teste e as ferramentas utilizadas.
- 
-## Ferramentas de Testes (Opcional)
-
-Comente sobre as ferramentas de testes utilizadas.
- 
-> **Links Úteis**:
-> - [IBM - Criação e Geração de Planos de Teste](https://www.ibm.com/developerworks/br/local/rational/criacao_geracao_planos_testes_software/index.html)
-> - [Práticas e Técnicas de Testes Ágeis](http://assiste.serpro.gov.br/serproagil/Apresenta/slides.pdf)
-> -  [Teste de Software: Conceitos e tipos de testes](https://blog.onedaytesting.com.br/teste-de-software/)
-> - [Criação e Geração de Planos de Teste de Software](https://www.ibm.com/developerworks/br/local/rational/criacao_geracao_planos_testes_software/index.html)
-> - [Ferramentas de Test para Java Script](https://geekflare.com/javascript-unit-testing/)
-> - [UX Tools](https://uxdesign.cc/ux-user-research-and-user-testing-tools-2d339d379dc7)
+|  |  |  |  |  |  |  |  |
+|--|--|--|--|--|--|--|--|
+| Caso de Teste | Requisito Associado | Objetivo do Teste | Passos | Critérios de Êxito | Resultado Obtido | Cenários de testes | Imagem de Registro |
+| CT-01 Realizar cadastro e efetuar login | RF-001 - Permitir que o usuário cadastre no sistema | Verificar se o usuário consegue se cadastrar e realizar login no sistema. | - Acessar o aplicativo<br> - Visualizar a página principal<br> - Clicar em “Crie sua conta” <br> - Preencher os campos obrigatórios (Nome, e-mail, senha e confirmar senha)<br> - Clicar no botão “Cadastrar”- Preencher campos para login (e-mail e senha)<br> - Clicar no botão “Entrar” | - Comunicação correta com o banco de dados. |
+| CT-02 Realizar a recuperação de senha | RF-001 - Permitir que o usuário cadastre no sistema. | Verificar se o usuário consegue realizar a recuperação de senha. | - Acessar o aplicativo<br> - Clicar em “Entrar”- Clicar em “Esqueceu sua senha”<br> - Preencher o campo obrigatório (e-mail)<br> - Clicar em “Redefinir Senha”<br> - Preencher os campos obrigatórios (nova senha e repetir senha)<br> - Clicar em “Redefinir Senha”<br> - Efetuar login | - Acesso na aplicação pelo login.<br> - Comunicação correta com o banco de dados. |
+| CT-03 Cadastro de dados de perfil | RF-002 - Permitir que o usuário cadastre seu perfil profissional no sistema. | Verificar se o usuário consegue se cadastrar seu perfil após login no sistema. | - Solicitação enviada com sucesso para voluntários disponíveis. |
+| CT-04 Edição de dados de perfil | RF-003 - Permitir que o usuário edite seu cadastro no sistema. | Verificar se o usuário consegue se editar seu perfil após login no sistema. | - Acessar o sistema- Efetuar login como voluntário- Acessar a seção “Ofertas de Ajuda”- Visualizar solicitações de ajuda disponíveis- Clicar em “Oferecer Ajuda” em uma solicitação específica | - Oferta de ajuda registrada com sucesso e usuário notificado. |
+| CT-05 Cadastro de interesses | RF-004 - Permitir que o usuário cadastre interesses. | Verificar se o usuário consegue se cadastrar seu perfil após login no sistema. | - Solicitação enviada com sucesso para voluntários disponíveis. |
+| CT-06 Edição dos interesses | RF-005 - Permitir que o usuário edite seu cadastro de interesses. | Verificar se o usuário consegue se editar seu perfil após login no sistema. | - Acessar o sistema- Efetuar login como voluntário- Acessar a seção “Ofertas de Ajuda”- Visualizar solicitações de ajuda disponíveis- Clicar em “Oferecer Ajuda” em uma solicitação específica | - Oferta de ajuda registrada com sucesso e usuário notificado. |
+| CT-07 Deletar interesses | RF-006 - Permitir que o usuário delete seu cadastro de interesses. | Verificar se o usuário consegue se editar seu perfil após login no sistema. | - Acessar o sistema- Efetuar login como voluntário- Acessar a seção “Ofertas de Ajuda”- Visualizar solicitações de ajuda disponíveis- Clicar em “Oferecer Ajuda” em uma solicitação específica | - Oferta de ajuda registrada com sucesso e usuário notificado. |
+| CT-08 Interação e apresentação de conteúdo conforme interesse do usuário | RF-007 - Permitir que o usuário interaja no sistema conforme cadastro de interesses. | Verificar se usuários e voluntários conseguem se comunicar através da plataforma. | - Acessar o sistema- Efetuar login- Acessar a seção de mensagens- Selecionar um contato- Enviar uma mensagem | - Mensagem enviada e recebida com sucesso. |
+| CT-09 Busca e apresentação de conteúdo conforme interesse do usuário  | RF-008 - Permitir que o usuário busque no sistema informações conforme cadastro de interesses | - Acessar o sistema- Efetuar login- Acessar o histórico de assistências- Selecionar uma assistência concluída- Deixar feedback e avaliação | - Feedback e avaliação registrados com sucesso. |
+| CT-10 Gerenciamento de interesses cadastrados | RF-009 - Permitir que o usuário delete no sistema conforme cadastro de interesses | Verificar se o administrador consegue gerenciar o conteúdo de forma eficaz. | - Acessar o sistema como administrador- Moderar feedbacks e avaliações- Gerenciar conteúdo da plataforma | - Conteúdo gerenciado com sucesso e plataforma mantida em bom funcionamento. |
+| CT-11 Atualização de conteúdo via administrador | RF-010 - Permitir que o usuário administrador cadastre conteúdos novos no sistema | Verificar se o administrador consegue gerenciar o conteúdo de forma eficaz. | - Acessar o sistema como administrador- Moderar feedbacks e avaliações- Gerenciar conteúdo da plataforma | - Conteúdo gerenciado com sucesso e plataforma mantida em bom funcionamento. |
+| CT-12 Gerenciamento de de conteúdo via administrador | RF-011 - Permitir que o usuário administrador edite conteúdos no sistema | Verificar se o administrador consegue gerenciar o conteúdo de forma eficaz. | - Acessar o sistema como administrador- Moderar feedbacks e avaliações- Gerenciar conteúdo da plataforma | - Conteúdo gerenciado com sucesso e plataforma mantida em bom funcionamento. |
+| CT-13 Gerenciamento de usuáiros via administrador | RF-012 - Permitir que o usuário administrador edite o nível de permissão do usuário no sistema | Verificar se o administrador consegue gerenciar o conteúdo de forma eficaz. | - Acessar o sistema como administrador- Moderar feedbacks e avaliações- Gerenciar conteúdo da plataforma | - Conteúdo gerenciado com sucesso e plataforma mantida em bom funcionamento. |
+| CT-14 Visualização de metricas e dashboard | RF-013 - Emitir um relatório de tarefas no mês | Verificar se o administrador consegue gerenciar o conteúdo de forma eficaz. | - Acessar o sistema como administrador- Moderar feedbacks e avaliações- Gerenciar conteúdo da plataforma | - Conteúdo gerenciado com sucesso e plataforma mantida em bom funcionamento. |
+| CT-15 Gerenciamento de certificados de conclusão | RF-014 - Emitir um certificado de qualificação sobre o conteúdo concluído | Verificar se o administrador consegue gerenciar o conteúdo de forma eficaz. | - Acessar o sistema como administrador- Moderar feedbacks e avaliações- Gerenciar conteúdo da plataforma | - Conteúdo gerenciado com sucesso e plataforma mantida em bom funcionamento. |

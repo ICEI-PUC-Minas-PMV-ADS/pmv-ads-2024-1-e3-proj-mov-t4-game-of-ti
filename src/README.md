@@ -31,25 +31,16 @@ O projeto ainda está em desenvolvimento e as próximas atualizações serão vo
 
 Antes de começar, verifique se você atendeu aos seguintes requisitos:
 
-- Você instalou a versão mais recente de `<linguagem / dependência / requeridos>`
-- Você tem uma máquina `<Windows / Linux / Mac>`. Indique qual sistema operacional é compatível / não compatível.
-- Você leu `<guia / link / documentação_relacionada_ao_projeto>`.
+- Node v20.7.0
+- npx 10.1.0
 
-## 🚀 Instalando <nome_do_projeto>
+## 🚀 Rodando o app local
 
-Para instalar o <nome_do_projeto>, siga estas etapas:
+Para rodar o app localmente na pasta `src` execute os comandos abaixo
 
-Linux e macOS:
+`npm i`
 
-```
-<comando_de_instalação>
-```
-
-Windows:
-
-```
-<comando_de_instalação>
-```
+`npx expo start`
 
 ## ☕ Usando  emulador local GAME OF TI
 
