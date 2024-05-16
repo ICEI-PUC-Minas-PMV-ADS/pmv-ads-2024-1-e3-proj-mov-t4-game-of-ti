@@ -7,7 +7,7 @@ import {
   useNavigationContainerRef,
 } from "@react-navigation/native";
 
-import ExamplePage from "./examplePage";
+import HomePage from "./homePage";
 import AnotherExample from "./anotherExample";
 
 const Drawer = createDrawerNavigator();
@@ -30,7 +30,7 @@ const Layout = () => {
         <Appbar.Content title="Game of IT" color="white" />
       </Appbar.Header>
       <Drawer.Navigator
-        initialRouteName="ExamplePage"
+        initialRouteName="HomePage"
         drawerContent={(props) => <CustomDrawerContent {...props} />}
         screenOptions={{
           drawerType: "front",
@@ -40,7 +40,7 @@ const Layout = () => {
           },
         }}
       >
-        <Drawer.Screen name="Example Page" component={ExamplePage} />
+        <Drawer.Screen name="Home Page" component={HomePage} />
         <Drawer.Screen name="Another Example" component={AnotherExample} />
       </Drawer.Navigator>
     </NavigationContainer>
