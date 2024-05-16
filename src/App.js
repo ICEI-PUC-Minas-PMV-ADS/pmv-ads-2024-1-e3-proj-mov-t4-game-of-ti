@@ -49,8 +49,8 @@ export default function App() {
           Esqueceu sua senha?
         </Text>
       </TouchableOpacity>
-      <TouchableOpacity>
-        <Text style={styles.login_button}>
+      <TouchableOpacity style={styles.login_button_container}>
+        <Text style={styles.login_button_text}>
           Entrar
         </Text>
       </TouchableOpacity>
@@ -71,12 +71,14 @@ const styles = StyleSheet.create({
     resizeMode: 'contain'
   },
   inputView: {
-    backgroundColor: "#FFC0CB",
-    borderRadius: 30,
+    alignSelf: 'stretch',
     width: "70%",
     height: 45,
-    marginBottom: 20,
-    alignItems: "center",
+    margin:5,
+    marginLeft: 50,
+    marginRight: 50,
+    borderBottomColor: '#24353f',
+    borderBottomWidth: 2
   },
   TextInput: {
     height: 50,
@@ -86,9 +88,9 @@ const styles = StyleSheet.create({
   },
   forgot_button: {
     height: 30,
-    marginBottom: 30,
+    marginBottom: 20,
   },
-  login_button: {
+  login_button_container: {
     alignItems: 'center',
     justifyContent: 'center',
     paddingVertical: 12,
@@ -97,6 +99,9 @@ const styles = StyleSheet.create({
     height: 45,
     borderRadius: 4,
     elevation: 8,
-    backgroundColor: "#FF1493"
+    backgroundColor: "#24353f"
+  },
+  login_button_text: {
+    color: '#fff'
   }
 });
