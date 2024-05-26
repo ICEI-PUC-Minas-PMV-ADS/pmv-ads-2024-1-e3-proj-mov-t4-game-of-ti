@@ -1,15 +1,15 @@
 import React from "react";
-import {View, StyleSheet} from 'react-native';
+// import {View, StyleSheet} from 'react-native';
 import { Text } from "react-native-paper";
 
 import Container from "../components/container";
 
-const ExamplePage = () => {
+const HomePage = () => {
   return (
     <Container>
-      <Text>Listagem de Carreiras</Text>
+      <Text>Teste</Text>
     </Container>
   );
 };
 
-export default ExamplePage;
+export default HomePage;
