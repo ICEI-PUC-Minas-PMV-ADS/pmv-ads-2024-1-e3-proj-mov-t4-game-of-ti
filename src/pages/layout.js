@@ -1,17 +1,17 @@
 import React from "react";
-import { Appbar, useTheme } from "react-native-paper";
+import { useTheme } from "react-native-paper";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import {
-  DrawerActions,
   NavigationContainer,
   useNavigationContainerRef,
 } from "@react-navigation/native";
 
+import LoginPage from "./loginPage";
 import HomePage from "./homePage";
-import AnotherExample from "./anotherExample";
+import CadastroPage from "./cadastroPage";
+import ResetPasswordPage from "./resetPasswordPage";
 
 const Drawer = createDrawerNavigator();
-import CustomDrawerContent from "../components/customDrawerContent";
 
 const Layout = () => {
   const navigationRef = useNavigationContainerRef();
@@ -19,32 +19,16 @@ const Layout = () => {
 
   return (
     <NavigationContainer ref={navigationRef}>
-      <Appbar.Header style={{ backgroundColor: theme.colors.primary }}>
-        <Appbar.Action
-          icon="menu"
-          color="#fff"
-          onPress={() => {
-            navigationRef.dispatch(DrawerActions.toggleDrawer());
-          }}
-        />
-        <Appbar.Content title="Game of IT" color="white" />
-      </Appbar.Header>
-      <Drawer.Navigator
-        initialRouteName="HomePage"
-        drawerContent={(props) => <CustomDrawerContent {...props} />}
-        screenOptions={{
-          drawerType: "front",
-          headerShown: false,
-          drawerStyle: {
-            backgroundColor: "#1D2D3D",
-          },
-        }}
-      >
-        <Drawer.Screen name="Home Page" component={HomePage} />
-        <Drawer.Screen name="Another Example" component={AnotherExample} />
+      <Drawer.Navigator initialRouteName="LoginPage">
+        <Drawer.Screen name="Login" component={LoginPage} options={{ headerShown: false }} />
+        <Drawer.Screen name="Cadastro" component={CadastroPage} options={{ headerShown: false }} />
+        <Drawer.Screen name="ResetPassword" component={ResetPasswordPage} options={{ headerShown: false }} />
+        <Drawer.Screen name="Home" component={HomePage} />
       </Drawer.Navigator>
     </NavigationContainer>
   );
 };
 
 export default Layout;
+
+
