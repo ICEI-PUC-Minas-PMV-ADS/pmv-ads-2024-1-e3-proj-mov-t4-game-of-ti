@@ -5,6 +5,8 @@ import {
   NavigationContainer,
   useNavigationContainerRef,
 } from "@react-navigation/native";
+import { SQLiteProvider, useSQLiteContext} from 'expo-sqlite';
+
 
 import LoginPage from "./loginPage";
 import HomePage from "./homePage";
