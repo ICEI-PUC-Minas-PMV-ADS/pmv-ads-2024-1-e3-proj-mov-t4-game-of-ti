@@ -11,7 +11,7 @@ import {
   ScrollView,
   BackHandler
 } from 'react-native';
-import { MultipleSelectList } from 'react-native-dropdown-select-list'
+import { MultipleSelectList } from 'react-native-dropdown-select-list';
 
 function CadastroPage({ navigation }) {
 
@@ -30,6 +30,7 @@ function CadastroPage({ navigation }) {
   const ageInputRef = createRef();
   const addressInputRef = createRef();
   const passwordInputRef = createRef();
+  const interessesInputRef = createRef();
 
   const [selected, setSelected] = React.useState([]);
   const data = [
@@ -48,6 +49,10 @@ function CadastroPage({ navigation }) {
 
   return (
     <View style={{ flex: 1, backgroundColor: '#ffffff' }}>
+      <SQLiteProvider databaseName="login.db" onInit={migrateDbIfNeeded}>
+        <Header />
+        <Content />
+      </SQLiteProvider>
       <ScrollView
         keyboardShouldPersistTaps="handled"
         contentContainerStyle={{
