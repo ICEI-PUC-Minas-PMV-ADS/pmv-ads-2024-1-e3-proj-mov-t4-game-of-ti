@@ -20,7 +20,7 @@ const CustomDrawerContent = (props) => {
         <Drawer.Item
           label="First Item"
           active={active === "first"}
-          onPress={() => goTo("first", "Example Page")}
+          onPress={() => goTo("first", "Home")}
         />
         <Drawer.Item
           label="Second Item"
