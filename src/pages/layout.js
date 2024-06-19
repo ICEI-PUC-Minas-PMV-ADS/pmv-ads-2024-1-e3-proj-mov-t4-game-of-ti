@@ -5,8 +5,7 @@ import {
   NavigationContainer,
   useNavigationContainerRef,
 } from "@react-navigation/native";
-import { SQLiteProvider, useSQLiteContext} from 'expo-sqlite';
-
+import { SQLiteProvider, useSQLiteContext } from 'expo-sqlite';
 
 import LoginPage from "./loginPage";
 import HomePage from "./homePage";
@@ -22,10 +21,10 @@ const Layout = () => {
   return (
     <NavigationContainer ref={navigationRef}>
       <Drawer.Navigator initialRouteName="LoginPage">
+        <Drawer.Screen name="Home" component={HomePage} />
         <Drawer.Screen name="Login" component={LoginPage} options={{ headerShown: false }} />
         <Drawer.Screen name="Cadastro" component={CadastroPage} options={{ headerShown: false }} />
         <Drawer.Screen name="ResetPassword" component={ResetPasswordPage} options={{ headerShown: false }} />
-        <Drawer.Screen name="Home" component={HomePage} />
       </Drawer.Navigator>
     </NavigationContainer>
   );

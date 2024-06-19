@@ -14,9 +14,13 @@ import {
 
 const ResetPasswordPage = ({ navigation }) => {
 
+  const [userName, setUserName] = useState('');
   const [userEmail, setUserEmail] = useState('');
   const [userPassword, setUserPassword] = useState('');
   const [newUserPassword, setNewUserPassword] = useState('');
+  const [userAge, setUserAge] = useState('');
+  const [userIinterests, setUserinterests] = React.useState([]);;
+  const [idUser, setIdUser] = useState('');
 
   const emailInputRef = createRef();
   const passwordInputRef = createRef();
@@ -24,6 +28,86 @@ const ResetPasswordPage = ({ navigation }) => {
   buttonCanceled = () => {
     navigation.navigate("Login")
   }
+
+  buttonSaved = () => {
+    if (!userEmail) {
+      alert('Por favor, preencha o e-mail');
+      return;
+    }
+    if (!userPassword) {
+      alert('Por favor, preencha a senha');
+      return;
+    }
+    if (!newUserPassword) {
+      alert('Por favor, preencha a nova senha');
+      return;
+    }
+    if (userPassword !== newUserPassword) {
+      alert('As senhas não conferem');
+      return;
+    }
+    getIdUser();
+    updatePassword();
+    navigation.navigate("Login")
+  }
+
+  const getIdUser = async ( ) => {
+    const response = await fetch('http://localhost:3000/users?email=' + userEmail, {
+      method: 'GET',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
+    });
+
+    await response.json().then((data) => {
+      data.map((user) => {
+        if (user.email === userEmail) {
+          setIdUser(user.id);
+          setUserName(user.name);
+          setUserinterests(user.interests);
+          setUserAge(user.age);
+        } else {
+          Alert.alert('Usuário não encontrado!',
+            'Preencha o formulário para se cadastrar!',
+            [{ Text: 'OK', onPress: () => { navigation.navigate('Cadastro') } }]
+          )
+          return;
+        }
+      });
+    });
+  }
+
+  const updatePassword = async () => {
+    const response = await fetch('http://localhost:3000/users/' + idUser, {
+      method: 'PUT',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        id: idUser,
+        name: userName,
+        email: userEmail,
+        password: newUserPassword,
+        age: userAge,
+        interests: userIinterests
+      }),
+    });
+    await response.json().then((data) => {
+      data.map((user) => {
+        if (user.email === userEmail) {
+          setNewUserPassword(user.password);
+        } else {
+          Alert.alert('Usuário não encontrado!',
+            'Preencha o formulário para se cadastra!' + idUser,
+            [{ Text: 'OK', onPress: () => { navigation.navigate('Cadastro') } }]
+          )
+          return;
+        }
+      });
+    });
+  };
 
   return (
     <View style={{ flex: 1, backgroundColor: '#ffffff', marginTop: 80 }}>
@@ -36,13 +120,13 @@ const ResetPasswordPage = ({ navigation }) => {
             placeholder="Digite seu e-mail"
             placeholderTextColor="#8b9cb5"
             keyboardType="email-address"
-            ref={emailInputRef}
+            autoCapitalize="none"
+            spellCheck={false}
             returnKeyType="next"
             onSubmitEditing={() =>
               passwordInputRef.current &&
               passwordInputRef.current.focus()
             }
-            blurOnSubmit={false}
           />
         </View>
         <View style={styles.SectionStyle}>
@@ -84,18 +168,19 @@ const ResetPasswordPage = ({ navigation }) => {
           />
         </View>
         <View style={styles.ViewButtonStyle}>
-            <TouchableOpacity
-              style={styles.buttonStyle}
-              activeOpacity={0.5}>
-              <Text style={styles.buttonTextStyle}>Salvar</Text>
-            </TouchableOpacity>
-            <TouchableOpacity
-              style={styles.buttonStyle}
-              activeOpacity={0.5}
-              onPress={buttonCanceled}>
-              <Text style={styles.buttonTextStyle}>Cancelar</Text>
-            </TouchableOpacity>
-          </View>
+          <TouchableOpacity
+            style={styles.buttonStyle}
+            activeOpacity={0.5}
+            onPress={buttonSaved}>
+            <Text style={styles.buttonTextStyle}>Salvar</Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={styles.buttonStyle}
+            activeOpacity={0.5}
+            onPress={buttonCanceled}>
+            <Text style={styles.buttonTextStyle}>Cancelar</Text>
+          </TouchableOpacity>
+        </View>
       </KeyboardAvoidingView>
     </View>
   );
@@ -145,7 +230,7 @@ const styles = StyleSheet.create({
   },
   inputStyle: {
     flex: 1,
-    color: 'white',
+    color: 'black',
     paddingLeft: 15,
     paddingRight: 15,
     borderWidth: 1,

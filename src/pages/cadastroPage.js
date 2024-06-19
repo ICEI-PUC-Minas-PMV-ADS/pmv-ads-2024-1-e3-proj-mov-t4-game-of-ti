@@ -18,7 +18,6 @@ function CadastroPage({ navigation }) {
   const [userName, setUserName] = useState('');
   const [userEmail, setUserEmail] = useState('');
   const [userAge, setUserAge] = useState('');
-  const [userAddress, setUserInterest] = useState('');
   const [userPassword, setUserPassword] = useState('');
   const [errortext, setErrortext] = useState('');
   const [
@@ -91,6 +90,8 @@ function CadastroPage({ navigation }) {
     setErrortext('');
     alert('Cadastro realizado com sucesso');
     postSaved();
+    getIdUser();
+    postInrerestSaved();
     navigation.navigate("Login")
   }
 
@@ -109,10 +110,6 @@ function CadastroPage({ navigation }) {
       }),
     })
       .then((response) => response.json())
-      .then((responseJson) => {
-        alert('Cadastro realizado com sucesso');
-        navigation.navigate("Login")
-      })
       .catch((error) => {
         console.error(error);
       });
@@ -151,6 +148,8 @@ function CadastroPage({ navigation }) {
               placeholder="Digite seu e-mail"
               placeholderTextColor="#8b9cb5"
               keyboardType="email-address"
+              autoCapitalize="none"
+              spellCheck={false}
               ref={emailInputRef}
               returnKeyType="next"
               onSubmitEditing={() =>

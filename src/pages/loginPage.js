@@ -18,22 +18,6 @@ export default function App({ navigation }) {
 
     loginOnPress = () => {
         getLogin();
-        if (!password || loginPassword !== password){
-            Alert.alert("Usuário ou senha incorreto!",
-                "Clique em Esqueceu sua senha!"+ loginPassword + " " + password,
-                [{ Text: "OK" }]
-            )
-            return;
-        }
-
-        if (!email || reg.test(email) === false) {
-            Alert.alert("Usuário não encontrado!",
-                "Preencha o formulario para se cadastar!",
-                [{ Text: "OK", onPress: () => { navigation.navigate("Cadastro") } }]
-            )
-            return;
-        }
-        navigation.navigate("Home")
     };
 
     const getLogin = async () => {
@@ -45,14 +29,28 @@ export default function App({ navigation }) {
             },
         });
 
-        const data = await response.json().then((data) => {
+        await response.json().then((data) => {
             data.map((user) => {
-                if (user.email === email) {
-                    return setLoginPassword(user.password);
+                if (user.email === email && reg.test(email)) {
+                    setLoginPassword(user.password);
+                } else {
+                    Alert.alert("Usuário não encontrado!",
+                        "Preencha o formulario para se cadastar!",
+                        [{ Text: "OK", onPress: () => { navigation.navigate("Cadastro") } }]
+                    )
+                    return;
+                }
+
+                if (!password || password !== loginPassword) {
+                    Alert.alert("Senha incorreta!",
+                        "Caso tenha esquecido, redefina a senha clicando em 'Esqueceu sua senha?'!",
+                        [{ Text: "OK" }]
+                    )
+                } else {
+                    navigation.navigate("Home")
                 }
             });
         });
-        return data;
     }
 
     resetPasswordOnPress = () => {
@@ -74,6 +72,8 @@ export default function App({ navigation }) {
                     inputMode="email"
                     textContentType='emailAddress'
                     keyboardType="email-address"
+                    autoCapitalize="none"
+                    spellCheck={false}
                     onChangeText={(email) => setEmail(email)}
                 />
             </View>
