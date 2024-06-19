@@ -18,7 +18,7 @@ function CadastroPage({ navigation }) {
   const [userName, setUserName] = useState('');
   const [userEmail, setUserEmail] = useState('');
   const [userAge, setUserAge] = useState('');
-  const [userAddress, setUserAddress] = useState('');
+  const [userAddress, setUserInterest] = useState('');
   const [userPassword, setUserPassword] = useState('');
   const [errortext, setErrortext] = useState('');
   const [
@@ -28,7 +28,6 @@ function CadastroPage({ navigation }) {
 
   const emailInputRef = createRef();
   const ageInputRef = createRef();
-  const addressInputRef = createRef();
   const passwordInputRef = createRef();
   const interessesInputRef = createRef();
 
@@ -46,13 +45,81 @@ function CadastroPage({ navigation }) {
   buttonCanceled = () => {
     navigation.navigate("Login")
   }
+  
+  buttonSaved = () => {
+    if (!userName) {
+      alert('Por favor, preencha o nome');
+      return;
+    }
+    if (!userEmail) {
+      alert('Por favor, preencha o e-mail');
+      return;
+    }
+    if (!userPassword) {
+      alert('Por favor, preencha a senha');
+      return;
+    }
+    if (!userAge) {
+      alert('Por favor, preencha a idade');
+      return;
+    }
+    if (selected.length == 0) {
+      alert('Por favor, selecione pelo menos um interesse');
+      return;
+    }
+    setErrortext('');
+    if (!userName) {
+      alert('Por favor, preencha o nome');
+      return;
+    }
+    if (!userEmail) {
+      alert('Por favor, preencha o e-mail');
+      return;
+    }
+    if (!userPassword) {
+      alert('Por favor, preencha a senha');
+      return;
+    }
+    if (!userAge) {
+      alert('Por favor, preencha a idade');
+      return;
+    }
+    if (selected.length == 0) {
+      alert('Por favor, selecione pelo menos um interesse');
+      return;
+    }
+    setErrortext('');
+    alert('Cadastro realizado com sucesso');
+    postSaved();
+    navigation.navigate("Login")
+  }
+
+  const postSaved = () => {
+    fetch('http://localhost:3000/users', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        name: userName,
+        email: userEmail,
+        password: userPassword,
+        age: userAge,
+        interests: selected
+      }),
+    })
+      .then((response) => response.json())
+      .then((responseJson) => {
+        alert('Cadastro realizado com sucesso');
+        navigation.navigate("Login")
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  }
 
   return (
     <View style={{ flex: 1, backgroundColor: '#ffffff' }}>
-      <SQLiteProvider databaseName="login.db" onInit={migrateDbIfNeeded}>
-        <Header />
-        <Content />
-      </SQLiteProvider>
       <ScrollView
         keyboardShouldPersistTaps="handled"
         contentContainerStyle={{
@@ -147,7 +214,8 @@ function CadastroPage({ navigation }) {
           <View style={styles.ViewButtonStyle}>
             <TouchableOpacity
               style={styles.buttonStyle}
-              activeOpacity={0.5}>
+              activeOpacity={0.5}
+              onPress={buttonSaved}>
               <Text style={styles.buttonTextStyle}>Salvar</Text>
             </TouchableOpacity>
             <TouchableOpacity
@@ -207,7 +275,7 @@ const styles = StyleSheet.create({
   },
   inputStyle: {
     flex: 1,
-    color: 'white',
+    color: 'black',
     paddingLeft: 15,
     paddingRight: 15,
     borderWidth: 1,

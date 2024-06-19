@@ -13,12 +13,14 @@ import {
 export default function App({ navigation }) {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [loginPassword, setLoginPassword] = useState("");
     const reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w\w+)+$/;
 
     loginOnPress = () => {
-        if (!password) {
+        getLogin();
+        if (!password || loginPassword !== password){
             Alert.alert("Usuário ou senha incorreto!",
-                "Clique em Esqueceu sua senha!",
+                "Clique em Esqueceu sua senha!"+ loginPassword + " " + password,
                 [{ Text: "OK" }]
             )
             return;
@@ -33,6 +35,25 @@ export default function App({ navigation }) {
         }
         navigation.navigate("Home")
     };
+
+    const getLogin = async () => {
+        const response = await fetch('http://localhost:3000/users', {
+            method: 'GET',
+            headers: {
+                Accept: 'application/json',
+                'Content-Type': 'application/json',
+            },
+        });
+
+        const data = await response.json().then((data) => {
+            data.map((user) => {
+                if (user.email === email) {
+                    return setLoginPassword(user.password);
+                }
+            });
+        });
+        return data;
+    }
 
     resetPasswordOnPress = () => {
         navigation.navigate("ResetPassword")
