@@ -26,7 +26,8 @@ const ResetPasswordPage = ({ navigation }) => {
   const passwordInputRef = createRef();
 
   buttonCanceled = () => {
-    navigation.navigate("Login")
+    navigation.goBack();
+    return true;
   }
 
   buttonSaved = () => {
@@ -48,7 +49,7 @@ const ResetPasswordPage = ({ navigation }) => {
     }
     getIdUser();
     updatePassword();
-    navigation.navigate("Login")
+    navigation.goBack();
   }
 
   const getIdUser = async ( ) => {

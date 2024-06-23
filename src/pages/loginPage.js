@@ -16,6 +16,7 @@ export default function App({ navigation }) {
     const [loginPassword, setLoginPassword] = useState("");
     const reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w\w+)+$/;
 
+
     loginOnPress = () => {
         getLogin();
     };
@@ -37,17 +38,18 @@ export default function App({ navigation }) {
                     Alert.alert("Usuário não encontrado!",
                         "Preencha o formulario para se cadastar!",
                         [{ Text: "OK", onPress: () => { navigation.navigate("Cadastro") } }]
-                    )
+                    );
                     return;
                 }
 
-                if (!password || password !== loginPassword) {
+                if (loginPassword === password) {
+                    navigation.navigate("Home");
+                } else {
                     Alert.alert("Senha incorreta!",
                         "Caso tenha esquecido, redefina a senha clicando em 'Esqueceu sua senha?'!",
                         [{ Text: "OK" }]
-                    )
-                } else {
-                    navigation.navigate("Home")
+                    );
+                    return;
                 }
             });
         });
@@ -59,7 +61,6 @@ export default function App({ navigation }) {
 
     return (
         <View style={styles.container}>
-
             <Image style={styles.image} source={require(".././assets/logo.png")} />
 
             <StatusBar style="auto" />
