@@ -16,7 +16,6 @@ export default function App({ navigation }) {
     const [loginPassword, setLoginPassword] = useState("");
     const reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w\w+)+$/;
 
-
     loginOnPress = () => {
         getLogin();
     };
@@ -56,7 +55,7 @@ export default function App({ navigation }) {
     }
 
     resetPasswordOnPress = () => {
-        navigation.navigate("ResetPassword")
+        navigation.navigate("Trocar Senha")
     }
 
     return (

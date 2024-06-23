@@ -19,7 +19,7 @@ const ResetPasswordPage = ({ navigation }) => {
   const [userPassword, setUserPassword] = useState('');
   const [newUserPassword, setNewUserPassword] = useState('');
   const [userAge, setUserAge] = useState('');
-  const [userIinterests, setUserinterests] = React.useState([]);;
+  const [userIinterests, setUserinterests] = React.useState([]);
   const [idUser, setIdUser] = useState('');
 
   const emailInputRef = createRef();

@@ -32,13 +32,13 @@ function CadastroPage({ navigation }) {
 
   const [selected, setSelected] = React.useState([]);
   const data = [
-    { key: '1', value: '12-factor' },
-    { key: '2', value: 'DevOps' },
-    { key: '3', value: 'SecOps' },
-    { key: '4', value: 'CI/CD' },
-    { key: '5', value: 'Mobile React' },
-    { key: '6', value: 'Android' },
-    { key: '7', value: 'iOS' },
+    { key: '1', value: ' 12-factor' },
+    { key: '2', value: ' DevOps' },
+    { key: '3', value: ' SecOps' },
+    { key: '4', value: ' CI/CD' },
+    { key: '5', value: ' Mobile React' },
+    { key: '6', value: ' Android' },
+    { key: '7', value: ' iOS' },
   ]
 
   buttonCanceled = () => {
