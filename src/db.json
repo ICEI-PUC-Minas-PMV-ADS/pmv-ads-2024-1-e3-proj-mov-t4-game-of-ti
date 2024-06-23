@@ -1,0 +1,15 @@
+{
+  "users": [
+    {
+      "id": "88e2",
+      "name": "Teste",
+      "email": "teste@teste.com.br",
+      "password": "12",
+      "age": "67",
+      "interests": [
+        " DevOps",
+        " 12-factor"
+      ]
+    }
+  ]
+}

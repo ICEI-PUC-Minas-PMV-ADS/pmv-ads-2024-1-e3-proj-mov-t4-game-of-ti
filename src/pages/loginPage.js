@@ -13,34 +13,53 @@ import {
 export default function App({ navigation }) {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [loginPassword, setLoginPassword] = useState("");
     const reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w\w+)+$/;
 
     loginOnPress = () => {
-        if (!password) {
-            Alert.alert("Usuário ou senha incorreto!",
-                "Clique em Esqueceu sua senha!",
-                [{ Text: "OK" }]
-            )
-            return;
-        }
-
-        if (!email || reg.test(email) === false) {
-            Alert.alert("Usuário não encontrado!",
-                "Preencha o formulario para se cadastar!",
-                [{ Text: "OK", onPress: () => { navigation.navigate("Cadastro") } }]
-            )
-            return;
-        }
-        navigation.navigate("Home")
+        getLogin();
     };
 
+    const getLogin = async () => {
+        const response = await fetch('http://localhost:3000/users', {
+            method: 'GET',
+            headers: {
+                Accept: 'application/json',
+                'Content-Type': 'application/json',
+            },
+        });
+
+        await response.json().then((data) => {
+            data.map((user) => {
+                if (user.email === email && reg.test(email)) {
+                    setLoginPassword(user.password);
+                } else {
+                    Alert.alert("Usuário não encontrado!",
+                        "Preencha o formulario para se cadastar!",
+                        [{ Text: "OK", onPress: () => { navigation.navigate("Cadastro") } }]
+                    );
+                    return;
+                }
+
+                if (loginPassword === password) {
+                    navigation.navigate("Home");
+                } else {
+                    Alert.alert("Senha incorreta!",
+                        "Caso tenha esquecido, redefina a senha clicando em 'Esqueceu sua senha?'!",
+                        [{ Text: "OK" }]
+                    );
+                    return;
+                }
+            });
+        });
+    }
+
     resetPasswordOnPress = () => {
-        navigation.navigate("ResetPassword")
+        navigation.navigate("Trocar Senha")
     }
 
     return (
         <View style={styles.container}>
-
             <Image style={styles.image} source={require(".././assets/logo.png")} />
 
             <StatusBar style="auto" />
@@ -53,6 +72,8 @@ export default function App({ navigation }) {
                     inputMode="email"
                     textContentType='emailAddress'
                     keyboardType="email-address"
+                    autoCapitalize="none"
+                    spellCheck={false}
                     onChangeText={(email) => setEmail(email)}
                 />
             </View>

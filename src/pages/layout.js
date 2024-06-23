@@ -1,31 +1,30 @@
 import React from "react";
-import { useTheme } from "react-native-paper";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import {
   NavigationContainer,
   useNavigationContainerRef,
 } from "@react-navigation/native";
-import { SQLiteProvider, useSQLiteContext} from 'expo-sqlite';
-
 
 import LoginPage from "./loginPage";
 import HomePage from "./homePage";
 import CadastroPage from "./cadastroPage";
 import ResetPasswordPage from "./resetPasswordPage";
+import ProfilePage from "./profilePage";
+import CursoPage from "./cursoPage";
 
 const Drawer = createDrawerNavigator();
 
 const Layout = () => {
   const navigationRef = useNavigationContainerRef();
-  const theme = useTheme();
-
   return (
     <NavigationContainer ref={navigationRef}>
-      <Drawer.Navigator initialRouteName="LoginPage">
-        <Drawer.Screen name="Login" component={LoginPage} options={{ headerShown: false }} />
-        <Drawer.Screen name="Cadastro" component={CadastroPage} options={{ headerShown: false }} />
-        <Drawer.Screen name="ResetPassword" component={ResetPasswordPage} options={{ headerShown: false }} />
+      <Drawer.Navigator initialRouteName="Login">
         <Drawer.Screen name="Home" component={HomePage} />
+        <Drawer.Screen name="Curso" component={CursoPage} />
+        <Drawer.Screen name="Login" component={LoginPage} options={{ headerShown: false, drawerItemStyle: { display: 'none' } }} />
+        <Drawer.Screen name="Cadastro" component={CadastroPage} options={{ headerShown: false, drawerItemStyle: { display: 'none' } }} />
+        <Drawer.Screen name="Perfil" component={ProfilePage} />
+        <Drawer.Screen name="Trocar Senha" component={ResetPasswordPage} options={{ headerShown: false }} />
       </Drawer.Navigator>
     </NavigationContainer>
   );
